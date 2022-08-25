@@ -43,3 +43,9 @@ func main() {
 	fmt.Println(*r.Data.URL)
 }
 ```
+
+You can also save and unpack the file
+
+```go
+path, err := c.HotelInfoIncrementalDump(models.LanguageRequest{Language: "de"}).Decompress("/path/to/dir")
+```
