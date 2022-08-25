@@ -19,7 +19,7 @@ type SearchMulticompleteRequest struct {
 	Language string `json:"language"`
 }
 
-type SearchRequest struct {
+type SearchRegionRequest struct {
 	RegionId    int     `json:"region_id"`
 	Checkin     string  `json:"checkin"`
 	Checkout    string  `json:"checkout"`

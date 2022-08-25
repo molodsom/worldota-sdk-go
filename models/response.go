@@ -105,7 +105,7 @@ type Hotel struct {
 }
 
 type Overview struct {
-	Data *[]struct {
+	Data []struct {
 		Endpoint       *string `json:"endpoint"`
 		IsActive       *bool   `json:"is_active"`
 		IsDebugMode    *bool   `json:"is_debug_mode"`
@@ -113,21 +113,21 @@ type Overview struct {
 		RequestsNumber *int    `json:"requests_number"`
 		SecondsNumber  *int    `json:"seconds_number"`
 	} `json:"data"`
-	Error  *string `json:"error"`
-	Status *string `json:"status"`
+	Error  string `json:"error"`
+	Status string `json:"status"`
 }
 
 type HotelDump struct {
-	Data *struct {
+	Data struct {
 		LastUpdate *string `json:"last_update"`
 		URL        *string `json:"url"`
 	} `json:"data"`
-	Error  *string `json:"error"`
-	Status *string `json:"status"`
+	Error  string `json:"error"`
+	Status string `json:"status"`
 }
 
 type HotelInfo struct {
-	Data *struct {
+	Data struct {
 		Address       *string `json:"address"`
 		AmenityGroups *[]struct {
 			Amenities *[]string `json:"amenities"`
@@ -276,12 +276,12 @@ type HotelInfo struct {
 		} `json:"star_certificate"`
 		StarRating *int8
 	} `json:"data"`
-	Error  *string `json:"error"`
-	Status *string `json:"status"`
+	Error  string `json:"error"`
+	Status string `json:"status"`
 }
 
 type SearchMulticomplete *struct {
-	Data *struct {
+	Data struct {
 		Hotels *[]struct {
 			ID       *string `json:"id"`
 			Name     *string `json:"name"`
@@ -294,15 +294,15 @@ type SearchMulticomplete *struct {
 			CountryCode *string `json:"country_code"`
 		} `json:"regions"`
 	}
-	Error  *string `json:"error"`
-	Status *string `json:"status"`
+	Error  string `json:"error"`
+	Status string `json:"status"`
 }
 
 type SearchResult struct {
-	Data *struct {
+	Data struct {
 		Hotels      *[]Hotel `json:"hotels"`
 		TotalHotels *int     `json:"total_hotels"`
 	} `json:"data"`
-	Error  *string `json:"error"`
-	Status *string `json:"status"`
+	Error  string `json:"error"`
+	Status string `json:"status"`
 }
